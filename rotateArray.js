@@ -24,14 +24,10 @@ var rotate = function(nums, k) {
 
 //this for some reason does not return properly, but sorted. 
 var rotate = function(nums, k) {
-    let output = []
-    let chunk = nums.slice(k + 1)
-    
+    let front = nums.slice(k + 1)
     for(let i = 0; i <= k; i++){
-        output.push(nums[i])
+        front.push(nums[i])
     }
-    
-    let temp = [...chunk, ...output];
-    
-    return temp;    
+    console.log(front)
+    return front;
 };
