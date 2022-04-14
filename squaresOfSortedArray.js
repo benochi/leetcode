@@ -17,6 +17,28 @@ var sortedSquares = function(nums) {
 //faster double pointer - great for sorted array
 var sortedSquares = function(nums) {
     const output = [];
+    let left = 0;
+    let right = nums.length - 1;
+    let i = right;
+    
+    while(left <= right){
+        let leftVal = nums[left] ** 2;
+        let rightVal = nums[right] ** 2; 
+        
+        if(leftVal > rightVal){
+            output[i--] = leftVal;
+            left++;
+        } else {
+            output[i--] = rightVal;
+            right--;
+        }
+    }
+    return output;
+};
+
+//breakdown
+var sortedSquares = function(nums) {
+    const output = [];
         // define pointers
         let left = 0;
         let right = nums.length - 1;
@@ -24,7 +46,7 @@ var sortedSquares = function(nums) {
         let i = right;
         while (left <= right) {
             // get squared values
-            const leftVal = nums[left] ** 2;
+            const leftVal = nums[left] ** 2; //same as Math.pow(nums[left], 2)
             const rightVal = nums[right] ** 2;
             //compare squared values this matters for negative inputs. 
             if(leftVal > rightVal) {
