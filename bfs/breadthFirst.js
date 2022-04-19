@@ -27,3 +27,24 @@ BFS(node) {
       });
    }
 }
+
+
+/*test 
+let g = new Graph();
+g.addNode("A");
+g.addNode("B");
+g.addNode("C");
+g.addNode("D");
+g.addNode("E");
+g.addNode("F");
+g.addNode("G");
+
+g.addEdge("A", "C");
+g.addEdge("A", "B");
+g.addEdge("A", "D");
+g.addEdge("D", "E");
+g.addEdge("E", "F");
+g.addEdge("B", "G");
+
+g.BFS("A");
+*/
