@@ -18,3 +18,20 @@ var reverseWords = function(s) {
   }
   return output
 };
+
+
+//faster
+var reverseWords = function(s) {
+  let res ='';
+  let word ='';
+    
+  for(let c of s){
+    if(c == ' '){
+      res += word + c;
+      word ='';
+    }else{
+      word = c + word;
+    }
+  }
+  return res + word;
+};
