@@ -21,7 +21,6 @@ var searchMatrix = function(matrix, target) {
 
 //for sorted matrix
 var searchMatrix = function(matrix, target) {
-  let y = matrix.length
   let row = 0
   let last = matrix[0].length - 1
     
