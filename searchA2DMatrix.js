@@ -17,3 +17,19 @@ var searchMatrix = function(matrix, target) {
   }
   return false
 };
+
+
+//for sorted matrix
+var searchMatrix = function(matrix, target) {
+  let y = matrix.length
+  let row = 0
+  let last = matrix[0].length - 1
+    
+  while (row < matrix.length) {
+    let cell = matrix[row][last]
+    if (cell === target) return true
+    else if (cell > target) last--;
+    else row++;
+  }
+  return false
+};
